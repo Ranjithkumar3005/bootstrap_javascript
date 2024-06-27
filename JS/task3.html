@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-3</title>
+</head>
+<body>
+    <h4>1st Number:
+    <input type="text" id="value1">
+    </h4>
+    <h4>2nd Number:
+    <input type="text" id="value2">
+    </h4>
+    <button onclick="mul()">Multiply</button>
+    <button onclick="del()">Divison</button>
+    <br>
+    <br>
+
+    <b><Label id="result"></Label></b>
+
+
+    <script>
+        function mul(){
+            var val1=Number(document.getElementById("value1").value);
+            var val2=Number(document.getElementById("value2").value);
+            tot=val1*val2;
+            document.getElementById("result").innerHTML="The Result is: <br>"+tot;
+        }
+        function del(){
+            var val1=Number(document.getElementById("value1").value);
+            var val2=Number(document.getElementById("value2").value);
+            tot=val1/val2;
+            document.getElementById("result").innerHTML="The Result is: <br>"+tot;
+        }
+    </script>
+</body>
+</html>

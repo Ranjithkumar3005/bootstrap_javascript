@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-5</title>
+    <style>
+        .error1{
+            color: red;
+        }
+        form{
+            border: 2px solid black;
+            margin: 400px;
+            margin-top: 200px;
+            padding-left: 150px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }        
+    </style>
+</head>
+<body>
+    <form action="" >
+        <table>
+            <tr>
+                <td class="">Name:</td>
+            <td><input type="text" class="error" id="name1">
+                <label for="" class="error1" id="name"></label>
+            </td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+            <td><input type="text" class="error" id="email1">
+                <label for="" class="error1" id="email"></label>
+            </td>
+            </tr>
+            <tr>
+                <td>Website:</td>
+            <td><input type="text" class="error" id="website1">
+                <label for="" class="error1" id="website"></label>
+            </td>
+            </tr>
+            <tr>
+                <td>Message:</td>
+            <td><textarea name=""  class="error" id="message1"></textarea>
+                <label for="" class="error1" id="message"></label>
+            </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="center"><input type="submit" onclick="validate()" ></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function validate(){
+            console.log("Hello")
+            event.preventDefault()
+            var nameerr=document.getElementById('name');
+            var emailerr=document.getElementById('email');
+            var websiteerr=document.getElementById('website');
+            var messageerr=document.getElementById('message');
+            var name=document.getElementById('name1');
+            var email=document.getElementById('email1');
+            var website=document.getElementById('website1');
+            var message=document.getElementById('message1');
+            if(name.value=='' ){
+                nameerr.innerHTML="This field is requird";
+                name.style.borderColor="red";
+            }
+            else{}
+            if(email.value==''){
+                emailerr.innerHTML="This field is requird";
+                email.style.borderColor="red";
+            }
+            else if(!(email.value).match(/^\w+@\w+\.\w{2,3}$/)){
+                 emailerr.innerHTML="Invalid email";
+                 email.style.borderColor="red";
+            }
+            else{}
+            if(website.value==''){
+                websiteerr.innerHTML="This field is requird";
+                website.style.borderColor="red";
+            }
+            else{}
+            if(message.value==''){
+                messageerr.innerHTML="This field is requird";
+                message.style.borderColor='red';
+            }
+            else{}
+        }
+    </script>
+</body>
+</html>

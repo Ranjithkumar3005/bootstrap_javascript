@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-2</title>
+</head>
+<body>
+     <h4>Enter String:
+    <input type="text" id="value">
+    <button id="btn" onclick="cal()">Submit</button></h4>
+    <label for="" id="store"></label>
+
+    <script>
+        function cal(){
+            let val=String(document.getElementById("value").value);
+            var arr=val.split("");
+            let val1=arr.sort().join(""); 
+            document.getElementById("store").innerHTML="Expected Output:"+val1;
+        }
+    </script>
+</body>
+</html>
